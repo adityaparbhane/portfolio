@@ -155,7 +155,7 @@ export const HeroSection = () => {
 
           <p className="mt-4 text-center text-white/60 md:text-lg">
             Skilled in developing designs into seamless, high-performance web
-            applications. Let's connect to discuss your next project.
+            applications. Let&apos;s connect to discuss your next project.
           </p>
         </div>
         <div className="flex gap-4 md:flex-row justify-center flex-col items-center mt-8">
