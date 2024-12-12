@@ -2,47 +2,49 @@ import darkSaasLandingPage from '@/assets/images/dark-saas-landing-page.png'
 import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png'
 import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png'
 import Image from 'next/image'
+import { SectionHeaders } from '@/components/sectionHeader'
 import CheckIcon from '@/assets/icons/check-circle.svg'
 import ArrowUpRight from '@/assets/icons/arrow-up-right.svg'
 import grainImage from '@/assets/images/grain.jpg'
-import { SectionHeaders } from '@/components/sectionHeader'
+import { Card } from '@/components/Card'
 
 const portfolioProjects = [
   {
-    company: 'Acme Corp',
-    year: '2022',
-    title: 'Dark Saas Landing Page',
+    company: '5TechG LLp',
+    year: '2024',
+    title: 'Hotel Landing Page',
     results: [
       { title: 'Enhanced user experience by 40%' },
       { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
+      { title: 'Easy Navigation and Accessibility' },
     ],
-    link: 'https://youtu.be/4k7IdSLxh6w',
+    link: 'https://client.tultechindia.com/',
     image: darkSaasLandingPage,
   },
+
   {
-    company: 'Innovative Co',
-    year: '2021',
-    title: 'Light Saas Landing Page',
-    results: [
-      { title: 'Boosted sales by 20%' },
-      { title: 'Expanded customer reach by 35%' },
-      { title: 'Increased brand awareness by 15%' },
-    ],
-    link: 'https://youtu.be/7hi5zwO75yc',
-    image: lightSaasLandingPage,
-  },
-  {
-    company: 'Quantum Dynamics',
+    company: 'Academic Projects',
     year: '2023',
-    title: 'AI Startup Landing Page',
+    title: 'Fitho Fitness WebApp',
     results: [
       { title: 'Enhanced user experience by 40%' },
       { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
+      { title: 'Advanced Workout Analytics' },
     ],
-    link: 'https://youtu.be/Z7I5uSRHMHg',
+    link: 'https://fitho.netlify.app/',
     image: aiStartupLandingPage,
+  },
+  {
+    company: 'Personal Projects',
+    year: '2023',
+    title: 'GitHub Repository',
+    results: [
+      { title: 'Diverse range of projects' },
+      { title: 'Open-source contributions' },
+      { title: 'Innovative solutions and implementations' },
+    ],
+    link: 'https://github.com/adityaparbhane?tab=repositories',
+    image: lightSaasLandingPage, // Replace with an appropriate image path
   },
 ]
 
@@ -56,10 +58,13 @@ export const ProjectsSection = () => {
           description=" See how i transformed concepts into engaging digital experiences."
         />
         <div className="flex flex-col gap-20 mt-10 md:mt-20 ">
-          {portfolioProjects.map((project) => (
-            <div
-              className="bg-gray-800 z-0 overflow-hidden after:z-10 rounded-3xl relative after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 after:pointer-events-none  md:px-10 md:pt-12 lg:pt-16 lg:px-20"
+          {portfolioProjects.map((project, projectIndex) => (
+            <Card
               key={project.title}
+              className="px-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-12 sticky "
+              style={{
+                top: `calc(64px + ${projectIndex * 50}px`,
+              }}
             >
               <div
                 className="absolute inset-0 -z-10 opacity-5"
@@ -110,7 +115,7 @@ export const ProjectsSection = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
