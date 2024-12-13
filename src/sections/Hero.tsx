@@ -12,6 +12,11 @@ import ContactForm from './ContactFrom'
 export const HeroSection = () => {
   const [isFormVisible, setIsFormVisible] = useState(false)
 
+  const handleScrollToProjects = useCallback(() => {
+    const projectsSection = document.getElementById('project')
+    projectsSection?.scrollIntoView({ behavior: 'smooth' })
+  }, [])
+
   const handleGetInTouchClick = useCallback(() => {
     console.log('Get in touch clicked')
     setIsFormVisible(true)
@@ -159,7 +164,10 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex gap-4 md:flex-row justify-center flex-col items-center mt-8">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <button
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
+            onClick={handleScrollToProjects}
+          >
             <span className="font-semibold">Explore My Creations</span>
             <ArrowDown className="size-4" />
           </button>
