@@ -103,6 +103,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                   <input
                     type="text"
                     name="fullName"
+                    label="Full Name"
                     className="w-full border text-black border-gray-300 rounded px-3 py-2 mt-1"
                     value={formData.fullName}
                     onChange={handleChange}
@@ -114,6 +115,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                   <input
                     type="tel"
                     name="number"
+                    label="Number"
                     className="w-full border text-black border-gray-300 rounded px-3 py-2 mt-1"
                     value={formData.number}
                     onChange={handleChange}
@@ -126,6 +128,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 <input
                   type="email"
                   name="email"
+                  label="Email"
                   className="w-full border text-black border-gray-300 rounded px-3 py-2 mt-1"
                   value={formData.email}
                   onChange={handleChange}
@@ -136,6 +139,7 @@ const ContactForm = ({ onClose }: { onClose: () => void }) => {
                 <label className="block text-gray-700">Description</label>
                 <textarea
                   name="description"
+                  label="Description"
                   className="w-full border text-black border-gray-300 rounded px-3 py-2 mt-1"
                   rows={4}
                   value={formData.description}
