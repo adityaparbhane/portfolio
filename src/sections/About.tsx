@@ -1,6 +1,6 @@
 'use client'
 
-import { SectionHeaders } from '@/components/sectionHeader'
+import { SectionHeaders } from '@/components/SectionHeader'
 import { Card } from '@/components/Card'
 import bookImage from '@/assets/images/book-cover.png'
 import Image from 'next/image'
