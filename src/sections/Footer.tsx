@@ -3,15 +3,15 @@ import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
 const footerLikes = [
   {
     title: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/username',
+    link: 'https://www.linkedin.com/in/aditya-parbhane-69b658201',
   },
   {
     title: 'Github',
-    link: '',
+    link: 'https://github.com/adityaparbhane',
   },
   {
     title: 'Instagram',
-    link: 'https://www.instagram.com/username',
+    link: 'https://www.instagram.com/_adityaparbhane_',
   },
 ]
 
